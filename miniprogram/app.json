@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/vote/vote",
+    "pages/contestant/contestant",
+    "pages/investigation/investigation",
+    "pages/user/user",
+    "pages/participant/participant",
+    "pages/relist/relist",
+    "pages/redetail/redetail"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "投票小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#546e7a",
+    "selectedColor": "#03a9f4",
+    "backgroundColor": "#eceff1",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "话题",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/homeUse.png"
+      },
+      {
+        "pagePath": "pages/investigation/investigation",
+        "text": "调研",
+        "iconPath": "images/icons/poll.png",
+        "selectedIconPath": "images/icons/pollUse.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/icons/user.png",
+        "selectedIconPath": "images/icons/userUse.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "usingComponents": {
+    "i-card": "iview-dist/card/index",
+    "i-button": "iview-dist/button/index",
+    "van-button": "../vant-dist/button",
+    "van-cell": "../vant-dist/cell",
+    "van-cell-group": "../vant-dist/cell-group"
+  }
+}

@@ -1,0 +1,13 @@
+/* pages/contestant/contestant.wxss */
+.btn-box{
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  
+}
+.btn{
+  border: 1px solid green;
+  max-width: 80%
+}

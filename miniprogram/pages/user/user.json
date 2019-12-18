@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-transition": "../../vant-dist/transition",
+    "van-panel": "../../vant-dist/panel"
+  }
+}

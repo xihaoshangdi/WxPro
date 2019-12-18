@@ -1,0 +1,6 @@
+/* pages/participant/Participant.wxss */
+.btn{
+  margin-top: 35rpx;
+  display: flex;
+  justify-content: center;
+}

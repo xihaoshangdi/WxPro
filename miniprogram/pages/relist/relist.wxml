@@ -1,0 +1,12 @@
+<!--pages/reContestant/reContestant.wxml-->
+
+<block wx:for="{{participantData}}" wx:key="item._id">
+<navigator url="../redetail/redetail?id={{item._id}}">
+<van-card
+  tag="{{ item.team_status }}"
+  desc="{{ item.team_name }}"
+  thumb="{{ item.team_image }}"
+  centered
+/>
+</navigator>
+</block>

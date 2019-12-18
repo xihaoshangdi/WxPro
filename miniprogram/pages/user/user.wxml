@@ -1,0 +1,39 @@
+<view class="operateArea">
+  <image src="{{defaultAvatar}}" class="opImg"></image>
+  <van-panel title="{{defaultText}}" use-footer-slot="{{resbtn}}">
+    <view slot="footer">
+      <van-button size="small" type="danger" open-type="getUserInfo" bind:getuserinfo="userInfo">
+        授权登录
+      </van-button>
+    </view>
+  </van-panel>
+</view>
+<view class="btnArea">
+  <van-button id="creat" plain round type="{{_select == 'creat'?'info':''}}" bind:click="trsCheck">
+    我创建的
+  </van-button>
+  <van-button id="login" plain round type="{{_select == 'login'?'info':''}}" bind:click="trsCheck">我参与的</van-button>
+</view>
+
+<van-transition show="{{ _select == 'creat'?true:false }}" name="fade-left"  custom-class="block">
+<van-cell 
+title="草稿箱" 
+icon="todo-list-o"
+url="../draft/draft"
+is-link>
+</van-cell>
+<van-cell-group>
+<block wx:for="{{userData}}" wx:key="item._id"> 
+  <van-cell 
+  title="{{item.title}}" 
+  value="{{item.endDate}}" 
+  url="../relist/relist?id={{item._id}}" />
+</block>
+</van-cell-group>
+</van-transition>
+
+<block wx:if="{{ _select == 'login'?true:false }}">
+  <van-cell title="我参与的" value="内容" />
+</block>
+
+

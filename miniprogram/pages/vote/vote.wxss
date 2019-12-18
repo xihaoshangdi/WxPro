@@ -1,0 +1,33 @@
+/* pages/vote/vote.wxss */
+
+.panel-title{
+  text-align: center;
+  padding: 15px;
+  background-color: #2d8cf0;
+  color: white;
+  font-weight: bolder
+}
+.card-box{
+  border: 1px solid red;
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+.box{
+  margin-bottom: 20px;
+}
+
+.btn {
+  position: fixed;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  right: 5%;
+  bottom: 15%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

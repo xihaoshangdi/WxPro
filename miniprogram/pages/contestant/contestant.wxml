@@ -1,0 +1,14 @@
+<!--pages/contestant/contestant.wxml 参赛队活动页-->
+<view>
+  <image src="{{contestant.team_image}}"></image>
+  <i-card title="{{contestant.team_name}}" full extra="{{0}}票  {{0}}名">
+    <view slot="content">{{contestant.team_introduce}}</view>
+    <view slot="footer">
+      <text></text> {{serial}}号队伍
+    </view>
+  </i-card>
+  <view class="btn-box">
+    <i-button i-class="btn" bind:click="sendVote" inline type="primary">投票</i-button>
+    <i-button i-class="btn" bind:click="sendGift" inline type="warning">礼物</i-button>
+  </view>
+</view>

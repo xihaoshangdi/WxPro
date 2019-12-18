@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-field": "../../vant-dist/field",
+    "van-transition": "../../vant-dist/transition",
+    "van-datetime-picker": "../../vant-dist/datetime-picker",
+    "van-popup": "../../vant-dist/popup",
+    "van-steps": "../../vant-dist/steps/index",
+    "van-stepper": "../../vant-dist/stepper/index"
+  }
+}

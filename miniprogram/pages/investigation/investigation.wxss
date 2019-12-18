@@ -1,0 +1,15 @@
+/* pages/creatEvent/creatEvent.wxss */
+.continer{
+margin: 60rpx 10rpx;
+}
+
+.event-button{
+  display: flex;
+  justify-content: center;
+  margin-top: 15rpx;
+}
+.votestep{
+  position: absolute;
+  right: 0%;
+  top: 20%;
+}

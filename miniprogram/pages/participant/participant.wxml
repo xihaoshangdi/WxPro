@@ -1,0 +1,57 @@
+<!--pages/participant/Participant.wxml-->
+<van-toast id="van-toast" />
+<view>
+  <van-cell-group>
+    <van-field
+      value="{{ team_name }}"
+      required
+      clearable
+      label="队伍名"
+      icon="question-o"
+      placeholder="参赛队名称"
+      bind:change="onChangName"
+      bind:click-icon="onClickIcon"
+    />
+    <van-field
+      value="{{ team_member }}"
+      required
+      clearable
+      type="textarea"
+      label="队员名"
+      icon="question-o"
+      placeholder="参赛队员名称"
+      autosize
+      bind:change="onChangMember"
+      bind:click-icon="onClickIcon"
+    />
+    <van-field
+      value="{{ team_tel }}"
+      required
+      clearable
+      label="联系电话"
+      bind:change="onChangTel"
+      type="number"
+    />
+    <van-field
+      value="{{ team_introduce }}"
+      required
+      clearable
+      type="textarea"
+      label="团队介绍"
+      autosize
+      bind:change="onChangIntroduce"
+    />
+  </van-cell-group>
+  <image wx:if="{{imagePath}}" src="{{imagePath}}"></image>
+  <van-cell title="活动宣传图" value="{{imgstatus}}" size="large" label="选择一张合适的图片" bind:click="selectImage" />
+  <view class="btn">
+  <van-button 
+  type="default" 
+  size="large" 
+  color="#7232dd" 
+  plain 
+  bind:click="onSubmit">
+  报名活动
+  </van-button>
+</view>
+</view>
