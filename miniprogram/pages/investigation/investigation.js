@@ -177,7 +177,7 @@ Page({
           endTime:this.data.endTime,
           voteCount:this.data.voteCount,
           participant:0,
-          status: '草稿'       
+          status: 'draft'       
         }
       }).then(res => {
         Toast.success('提交成功');
