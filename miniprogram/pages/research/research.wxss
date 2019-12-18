@@ -1,0 +1,44 @@
+/* pages/investigation/investigation.wxss */
+.header {
+  border: 1px solid red;
+  height: 500rpx;
+}
+
+.continer {
+  margin-top: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  width: 30%;
+  height: 230rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #667eea;
+  border-radius: 5rpx;
+}
+.card-cycle{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #4facfe;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.card-text{
+  font-size: 35rpx;
+  color: white;
+}
+
+image{
+  max-width: 50rpx;
+  max-height: 50rpx;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

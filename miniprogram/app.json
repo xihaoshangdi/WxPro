@@ -7,7 +7,8 @@
     "pages/user/user",
     "pages/participant/participant",
     "pages/relist/relist",
-    "pages/redetail/redetail"
+    "pages/redetail/redetail",
+    "pages/research/research"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -29,7 +30,7 @@
         "selectedIconPath": "images/icons/homeUse.png"
       },
       {
-        "pagePath": "pages/investigation/investigation",
+        "pagePath": "pages/research/research",
         "text": "调研",
         "iconPath": "images/icons/poll.png",
         "selectedIconPath": "images/icons/pollUse.png"
@@ -50,6 +51,7 @@
     "i-button": "iview-dist/button/index",
     "van-button": "../vant-dist/button",
     "van-cell": "../vant-dist/cell",
-    "van-cell-group": "../vant-dist/cell-group"
+    "van-cell-group": "../vant-dist/cell-group",
+    "van-toast": "../vant-dist/toast"
   }
 }
