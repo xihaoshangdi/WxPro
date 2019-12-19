@@ -3,38 +3,38 @@
 <van-toast id="van-toast" />
 <van-steps steps="{{ steps }}" active="{{ active }}" active-color="{{activeColor}}" />
 
-  <view class="continer">
-    <van-cell-group wx:if="{{active===0?true:false}}">
-      <van-field  value="{{title}}" placeholder="标题(限定20字)" clearable="{{true}}" maxlength='20' bind:change="onTitleChange" />
-      <van-field  value="{{introduce}}" label="活动介绍" type="textarea" placeholder="请在这里输入对活动的介绍(限定80字)" autosize clearable="{{true}}" maxlength='80' bind:change="onIntroduceChange" />
-    </van-cell-group>
+<view class="continer">
+  <van-cell-group wx:if="{{active===0?true:false}}">
+    <van-field value="{{title}}" placeholder="标题(限定20字)" clearable="{{true}}" maxlength='20' bind:change="onTitleChange" />
+    <van-field value="{{introduce}}" label="活动介绍" type="textarea" placeholder="请在这里输入对活动的介绍(限定80字)" autosize clearable="{{true}}" maxlength='80' bind:change="onIntroduceChange" />
+  </van-cell-group>
 
-    <view wx:if="{{active===1?true:false}}">
-      <image wx:if="{{imagePath}}" src="{{imagePath}}"></image>
-      <van-cell title="活动宣传图" value="{{imgstatus}}" size="large" label="选择一张合适的图片" bind:click="selectImage" />
-    </view>
-
-    <view wx:if="{{active===2?true:false}}">
-      <van-cell-group title="日期">
-        <van-cell title="起始时间" value="{{startDate}}" bind:click="startDate" />
-        <van-cell title="结束时间" value="{{endDate}}" bind:click="endDate" />
-      </van-cell-group>
-      <van-cell-group title="次数">
-        <van-cell title="日投票次数" />
-        <van-stepper class="votestep" value="{{ voteCount }}" bind:change="voteCount" />
-      </van-cell-group>
-    </view>
-
-    <van-popup show="{{ dateShow }}" position="bottom" overlay="{{ true }}" bind:close="dateClose">
-      <van-datetime-picker wx:if="{{startPop}}" type="date" bind:confirm="onStartConfirm" bind:cancel="dateClose" min-date="{{ minDate }}" formatter="{{ formatter }}" />
-
-      <van-datetime-picker wx:if="{{endPop}}" type="date" bind:confirm="onEndConfirm" bind:cancel="dateClose" min-date="{{ startTime }}" formatter="{{ formatter }}" />
-
-    </van-popup>
-
-    <van-transition class="event-button" show="{{ btnShow }}" name='fade-up'>
-      <van-button type="default" size="large" color="#7232dd" plain bind:click="btnTap">
-        {{btnText}}
-      </van-button>
-    </van-transition>
+  <view wx:if="{{active===1?true:false}}">
+    <image wx:if="{{imagePath}}" src="{{imagePath}}"></image>
+    <van-cell title="活动宣传图" value="{{imgstatus}}" size="large" label="选择一张合适的图片" bind:click="selectImage" />
   </view>
+
+  <view wx:if="{{active===2?true:false}}">
+    <van-cell-group title="日期">
+      <van-cell title="起始时间" value="{{startDate}}" bind:click="startDate" />
+      <van-cell title="结束时间" value="{{endDate}}" bind:click="endDate" />
+    </van-cell-group>
+    <van-cell-group title="次数">
+      <van-cell title="日投票次数" />
+      <van-stepper class="votestep" value="{{ voteCount }}" bind:change="voteCount" />
+    </van-cell-group>
+  </view>
+
+  <van-popup show="{{ dateShow }}" position="bottom" overlay="{{ true }}" bind:close="dateClose">
+    <van-datetime-picker wx:if="{{startPop}}" type="date" bind:confirm="onStartConfirm" bind:cancel="dateClose" min-date="{{ minDate }}" formatter="{{ formatter }}" />
+
+    <van-datetime-picker wx:if="{{endPop}}" type="date" bind:confirm="onEndConfirm" bind:cancel="dateClose" min-date="{{ startTime }}" formatter="{{ formatter }}" />
+
+  </van-popup>
+
+  <van-transition class="event-button" show="{{ btnShow }}" name='fade-up'>
+    <van-button type="default" size="large" color="#7232dd" plain bind:click="btnTap">
+      {{btnText}}
+    </van-button>
+  </van-transition>
+</view>

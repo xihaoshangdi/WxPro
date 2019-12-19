@@ -117,9 +117,9 @@ Page({
   }, 
   //
   sendVote() {
-    if (this.data.status !== 'fail') {
-      console.log(this.data.sendCount)
+    if (this.data.status !== 'fail') {  
       if (this.data.sendCount <= this.data.voteCount) {
+        Toast.success('投票成功')
         wx.cloud.callFunction({
           name: 'updataPoll',
           data: {
@@ -147,7 +147,6 @@ Page({
           })
           })
           .catch(console.error)
-        
       }
     }else{
       Toast.fail('今日投票已达上限');

@@ -71,6 +71,13 @@
 					"pathName": "pages/vote/vote",
 					"query": "id=01ace4015df9d7dd047c1284495d2a9a",
 					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "活动创建页",
+					"pathName": "pages/investigation/investigation",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

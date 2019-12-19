@@ -78,7 +78,7 @@ Page({
     voteSet.
       field({
         poll: true,
-        team_name:true
+        contestant_name:true
       }).where({
         vote_id: this.data.vote_id
       })

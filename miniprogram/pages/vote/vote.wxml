@@ -25,7 +25,7 @@
 <block wx:if="{{current==='rank'}}">
   <i-cell-group>
     <block wx:for="{{rankdata}}" wx:key="{{item._id}}">
-      <i-cell title="{{item.team_name}}" value="{{index}}"></i-cell>
+      <i-cell title="{{item.contestant_name}}" value="{{index}}"></i-cell>
     </block>
   </i-cell-group>
 

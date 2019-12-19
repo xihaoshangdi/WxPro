@@ -162,34 +162,38 @@ Page({
       mask: true,
       message: '提交申请中...'
     });
-    wx.cloud.uploadFile({
-      cloudPath: `${Math.floor(Math.random() * 100000)}`,
-      filePath: this.data.imagePath,
-    }).then(res => {
-      votTable.add({
-        data: {
-          title: this.data.title,
-          introduce: this.data.introduce,
-          imgCloudPath: res.fileID,
-          startDate:this.data.startDate,
-          startTime:this.data.startTime,
-          endDate:this.data.endDate,
-          endTime:this.data.endTime,
-          voteCount:this.data.voteCount,
-          participant:0,
-          status: 'draft'       
-        }
+    if(this.data.startTime<=this.data.endTime){
+      wx.cloud.uploadFile({
+        cloudPath: `${Math.floor(Math.random() * 100000)}`,
+        filePath: this.data.imagePath,
       }).then(res => {
-        Toast.success('提交成功');
-        wx.navigateBack({
-          delta: 1
+        votTable.add({
+          data: {
+            title: this.data.title,
+            introduce: this.data.introduce,
+            imgCloudPath: res.fileID,
+            startDate: this.data.startDate,
+            startTime: this.data.startTime,
+            endDate: this.data.endDate,
+            endTime: this.data.endTime,
+            voteCount: this.data.voteCount,
+            participant: 0,
+            status: 'draft'
+          }
+        }).then(res => {
+          Toast.success('提交成功');
+          wx.navigateBack({
+            delta: 1
+          })
+        }).catch(error => {
+          Toast.fail('提交失败');
+          console.error
         })
       }).catch(error => {
-        Toast.fail('提交失败');
         console.error
       })
-    }).catch(error => {
-      console.error
-    })
+    }else{
+      Toast.fail('时间错误，提交失败');
+    }
   }
 })
