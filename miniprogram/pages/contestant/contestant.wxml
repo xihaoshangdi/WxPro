@@ -1,7 +1,9 @@
 <!--pages/contestant/contestant.wxml 参赛队活动页-->
+
+<van-toast id="van-toast" />
 <view>
   <image src="{{contestant.team_image}}"></image>
-  <i-card title="{{contestant.team_name}}" full extra="{{0}}票  {{0}}名">
+  <i-card title="{{contestant.team_name}}" full extra="{{poll}}票  {{rank}}名">
     <view slot="content">{{contestant.team_introduce}}</view>
     <view slot="footer">
       <text></text> {{serial}}号队伍
