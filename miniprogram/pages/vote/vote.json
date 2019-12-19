@@ -3,7 +3,9 @@
     "i-tab-bar": "../../iview-dist/tab-bar/index",
     "i-tab-bar-item": "../../iview-dist/tab-bar-item/index",
     "i-panel": "../../iview-dist/panel/index",
-    "i-input": "../../iview-dist/input/index"
+    "i-input": "../../iview-dist/input/index",
+    "i-cell-group": "../../iview-dist/cell-group/index",
+    "i-cell": "../../iview-dist/cell/index"
     
   }
 }

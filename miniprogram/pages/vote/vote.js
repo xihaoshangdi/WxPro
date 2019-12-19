@@ -2,6 +2,7 @@
 const db = wx.cloud.database();
 const votTable = db.collection('votTable')
 const Contestant = db.collection('Contestant')
+const voteSet = db.collection('VoteSet')
 Page({
 
   /**
@@ -14,11 +15,11 @@ Page({
     contestantList: null,
     current: 'homepage',
     //活动页数据
-    vote_event: true,
     serial:null,
     check_status: true,
     contestant: null,
     //排名页数据
+    rankdata:null
   },
 
   /**
@@ -44,6 +45,7 @@ Page({
       this.setData({
         contestantList: res.data
       })
+      this.getRank()
     }).catch(console.error)
   },
   //报名
@@ -59,9 +61,7 @@ Page({
       serial: event.detail.detail.value
     })
     if (this.data.serial.length!=0){
-      console.log(this.data.serial.length)
       const data = this.data.contestantList[this.data.serial - 1];
-      console.log(data)
       this.setData({
         check_status: false,
         contestant: {
@@ -72,10 +72,24 @@ Page({
         }
       })
     }
-    
-    
-
-
+  },
+  //
+  getRank(){
+    voteSet.
+      field({
+        poll: true,
+        team_name:true
+      }).where({
+        vote_id: this.data.vote_id
+      })
+      .orderBy('poll', 'desc')
+      .get()
+      .then(res=>{
+        this.setData({
+          rankdata:res.data
+        })
+      })
+      .catch(console.error)
   },
   //tabBar
   handleChange({ detail }) {

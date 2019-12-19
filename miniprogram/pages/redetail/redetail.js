@@ -31,6 +31,7 @@ Page({
         data: {
           contestant_id: this.data.participant_id,
           vote_id: this.data.participantData.vote_id,
+          contestant_name: this.data.participantData.team_name,
           poll: 0
         }
       })
