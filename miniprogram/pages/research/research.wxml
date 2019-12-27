@@ -1,25 +1,18 @@
 <!--pages/investigation/investigation.wxml-->
-<view class="header">
-  header
+<view class="swiper-container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <swiper-item>
+        <van-image width="100%" height="200" fit="contain" src="{{item}}" class="img" />
+      </swiper-item>
+    </block>
+  </swiper>
 </view>
-
 <view class="continer">
   <view class="card" bindtap="openCreat">
     <view class="card-cycle">
-      <image src="../../images/poll/creat.png"></image>
+      <image class="card-image" src="../../images/poll/creat.png"></image>
     </view>
     <text class="card-text">发起活动</text>
-  </view>
-  <view class="card" bindtap="openSign">
-    <view class="card-cycle">
-      <image src="../../images/poll/sign.png"></image>
-    </view>
-    <text class="card-text">活动报名</text>
-  </view>
-  <view class="card" bindtap="openVote">
-    <view class="card-cycle">
-      <image src="../../images/poll/vote.png"></image>
-    </view>
-    <text class="card-text">快速投票</text>
   </view>
 </view>

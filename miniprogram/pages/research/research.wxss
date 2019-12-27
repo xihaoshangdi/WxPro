@@ -1,26 +1,48 @@
 /* pages/investigation/investigation.wxss */
-.header {
-  border: 1px solid red;
-  height: 500rpx;
+
+
+swiper {
+    height: 800rpx;
+}
+swiper-item image {
+    width: 100%;
+    height: 100%;
+}
+.swiper-container{
+  position: relative;
+}
+.swiper-container .swiper{
+  height: 300rpx;
+}
+.swiper-container .swiper .img{
+  width: 100%;
+  height: 100%;
 }
 
+
+
+
+
+
+
 .continer {
-  margin-top: 100rpx;
+  margin-top: 200rpx;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .card {
-  width: 30%;
-  height: 230rpx;
+  width: 400rpx;
+  height: 400rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #667eea;
-  border-radius: 5rpx;
+  border-radius: 50%;
 }
+
 .card-cycle{
   width: 100rpx;
   height: 100rpx;
@@ -29,12 +51,13 @@
   position: relative;
   margin-bottom: 20rpx;
 }
+
 .card-text{
   font-size: 35rpx;
   color: white;
 }
 
-image{
+.card-image{
   max-width: 50rpx;
   max-height: 50rpx;
   position: absolute;

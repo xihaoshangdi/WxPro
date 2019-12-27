@@ -43,6 +43,12 @@
 					"pathName": "pages/vote/vote",
 					"query": "id=b040a67a5e04aa01077155e80d0337f8",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/research/research",
+					"pathName": "pages/research/research",
+					"scene": null
 				}
 			]
 		}
