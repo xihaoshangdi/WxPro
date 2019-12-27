@@ -8,7 +8,6 @@
   font-weight: bolder
 }
 .card-box{
-  border: 1px solid red;
   padding-top: 25px;
   padding-bottom: 40px;
 }

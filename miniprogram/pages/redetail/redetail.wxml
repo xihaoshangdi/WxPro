@@ -1,12 +1,12 @@
 <!--pages/reviewDetail/reviewDetail.wxml-->
 
 <view>
-  <image src="{{participantData.team_image}}"></image>
+  <van-image width="100%" height="200" fit="contain" src="{{participantData.team_image}}" />
   <i-card title="{{participantData.team_name}}" full extra="{{participantData.team_tel}}">
     <view slot="content">{{participantData.team_introduce}}</view>
   </i-card>
   <view class="btn-box">
-    <i-button i-class="btn" id="pass" bind:click="update" inline type="primary">通过</i-button>
-    <i-button i-class="btn" id="fail" bind:click="update" inline type="warning">不通过</i-button>
+    <i-button long i-class="btn" id="pass" bind:click="update"  size="default" type="primary">通过</i-button>
+    <i-button long i-class="btn" id="fail" bind:click="update"  size="default" type="warning">不通过</i-button>
   </view>
 </view>

@@ -39,44 +39,9 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "活动报名页",
-					"pathName": "pages/participant/participant",
-					"query": "id=72527ac65df7252a03cdc46a3a754b6b",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "审核参赛者详情页",
-					"pathName": "pages/redetail/redetail",
-					"query": "id=b040a67a5df8a6e7043223926da4c7a1",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "活动创建页",
-					"pathName": "pages/investigation/investigation",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 3,
-					"name": "活动详情页",
-					"pathName": "pages/contestant/contestant",
-					"query": "id=72527ac65df9d88e047d72705937e830&serial=1",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "活动页",
+					"name": "pages/vote/vote",
 					"pathName": "pages/vote/vote",
-					"query": "id=01ace4015df9d7dd047c1284495d2a9a",
-					"scene": null
-				},
-				{
-					"id": 5,
-					"name": "活动创建页",
-					"pathName": "pages/investigation/investigation",
-					"query": "",
+					"query": "id=b040a67a5e04aa01077155e80d0337f8",
 					"scene": null
 				}
 			]

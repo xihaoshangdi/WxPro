@@ -36,7 +36,7 @@
   <i-panel title="{{event.title}}">
     <view style="padding: 15px;">{{event.introduce}}</view>
     <view style="padding: 10px;">每位用户每日可投票{{event.voteCount}}次</view>
-    <image src="{{event.imgCloudPath}}"></image>
+    <van-image width="100%" height="200" fit="contain" src="{{event.imgCloudPath}}" />
   </i-panel>
 </block>
 

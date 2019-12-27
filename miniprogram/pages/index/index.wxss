@@ -1,0 +1,8 @@
+
+.box{
+  margin-top: 50rpx;
+}
+
+.card{
+  margin-bottom: 40rpx;
+}

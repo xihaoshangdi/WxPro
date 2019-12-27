@@ -52,6 +52,7 @@
     "van-button": "../vant-dist/button",
     "van-cell": "../vant-dist/cell",
     "van-cell-group": "../vant-dist/cell-group",
-    "van-toast": "../vant-dist/toast"
+    "van-toast": "../vant-dist/toast",
+    "van-image": "../vant-dist/image/index"
   }
 }

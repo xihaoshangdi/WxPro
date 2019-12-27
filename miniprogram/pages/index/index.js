@@ -23,7 +23,9 @@ Page({
       .where({
         //状态为pass的可以显示
         status: "pass"
-      }).get().then(res => {
+      })
+      .orderBy('participant', 'desc')
+      .get().then(res => {
         this.setData({
           voteList: res.data,
         })

@@ -162,7 +162,7 @@ Page({
       mask: true,
       message: '提交申请中...'
     });
-    if(this.data.startTime<=this.data.endTime){
+    if (this.data.startTime <= this.data.endTime && this.data.startTime && this.data.endTime){
       wx.cloud.uploadFile({
         cloudPath: `${Math.floor(Math.random() * 100000)}`,
         filePath: this.data.imagePath,

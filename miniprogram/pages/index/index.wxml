@@ -1,11 +1,11 @@
 
 <view class="box">
-  <block wx:for="{{voteList}}" wx:key="{{item._id}}">
+  <view class="card" wx:for="{{voteList}}" wx:key="{{item._id}}">
     <navigator url="../vote/vote?id={{item._id}}">
       <i-card title="{{item.title}}" extra="" thumb="{{item.imgCloudPath}}">
         <view slot="content">{{item.participant||0}}人参与</view>
         <view slot="footer">{{item.endDate}}</view>
       </i-card>
     </navigator>
-  </block>
+  </view>
 </view>

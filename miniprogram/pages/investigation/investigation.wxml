@@ -10,7 +10,7 @@
   </van-cell-group>
 
   <view wx:if="{{active===1?true:false}}">
-    <image wx:if="{{imagePath}}" src="{{imagePath}}"></image>
+    <van-image width="100%" height="200" fit="contain" wx:if="{{imagePath}}" src="{{imagePath}}" />
     <van-cell title="活动宣传图" value="{{imgstatus}}" size="large" label="选择一张合适的图片" bind:click="selectImage" />
   </view>
 
